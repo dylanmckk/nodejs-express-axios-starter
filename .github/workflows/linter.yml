@@ -1,0 +1,15 @@
+name: Linter
+run-name: ${{ github.actor }} is auditing
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run linter
